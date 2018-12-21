@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema version="1.0" targetNamespace="http://redemption.ws.ms.thy.com/" xmlns:tns="http://redemption.ws.ms.thy.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.thy.com/ws/responseHeader" xmlns:ns1="http://www.thy.com/ws/requestHeader">
+
+  <xs:import namespace="http://www.thy.com/ws/requestHeader" schemaLocation="AwardOperationsService2.xml"/>
+
+  <xs:import namespace="http://www.thy.com/ws/responseHeader" schemaLocation="AwardOperationsService1.xml"/>
+
+  <xs:element name="CheckOrderID" type="tns:CheckOrderID"/>
+
+  <xs:element name="CheckOrderIDResponse" type="tns:CheckOrderIDResponse"/>
+
+  <xs:element name="GetOrderID" type="tns:GetOrderID"/>
+
+  <xs:element name="GetOrderIDResponse" type="tns:GetOrderIDResponse"/>
+
+  <xs:element name="GetParameters" type="tns:GetParameters"/>
+
+  <xs:element name="GetParametersResponse" type="tns:GetParametersResponse"/>
+
+  <xs:element name="Mrglog" type="tns:Mrglog"/>
+
+  <xs:element name="MrglogResponse" type="tns:MrglogResponse"/>
+
+  <xs:element name="OrderValues" type="tns:OrderValues"/>
+
+  <xs:element name="OrderValuesResponse" type="tns:OrderValuesResponse"/>
+
+  <xs:element name="nonAirAwardReversal" type="tns:nonAirAwardReversal"/>
+
+  <xs:element name="nonAirAwardReversalResponse" type="tns:nonAirAwardReversalResponse"/>
+
+  <xs:element name="nonAirIssueAward" type="tns:nonAirIssueAward"/>
+
+  <xs:element name="nonAirIssueAwardResponse" type="tns:nonAirIssueAwardResponse"/>
+
+  <xs:element name="nonAirReissueAward" type="tns:nonAirReissueAward"/>
+
+  <xs:element name="nonAirReissueAwardResponse" type="tns:nonAirReissueAwardResponse"/>
+
+  <xs:complexType name="CheckOrderID">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="checkOrderIDDetail" type="tns:checkOrderIDDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkOrderIDDetail">
+    <xs:sequence>
+      <xs:element name="operationCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="orderID" type="xs:string" minOccurs="0"/>
+      <xs:element name="redemMiles" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="orderValuesDetail">
+    <xs:sequence>
+      <xs:element name="orderID" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getParametersResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence>
+          <xs:element name="parameterList" type="tns:parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="methodResult">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="parameter">
+    <xs:sequence>
+      <xs:element name="definition" type="xs:string" minOccurs="0"/>
+      <xs:element name="groupCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="indicator" type="xs:string" minOccurs="0"/>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mrglogResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="getOrderIDResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence>
+          <xs:element name="memberVerifyOtpOnce" type="xs:string" minOccurs="0"/>
+          <xs:element name="orderID" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="checkOrderIDResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="orderValuesResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence>
+          <xs:element name="orderIdValues" type="tns:keyValue" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="partnerParameterList" type="tns:parameter" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="keyValue">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OrderValuesResponse">
+    <xs:sequence>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+      <xs:element name="return" type="tns:orderValuesResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="MrglogResponse">
+    <xs:sequence>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+      <xs:element name="return" type="tns:mrglogResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="mrglogDetail">
+    <xs:sequence>
+      <xs:element name="clientTransactionId" type="xs:string" minOccurs="0"/>
+      <xs:element name="log" type="xs:string" minOccurs="0"/>
+      <xs:element name="operation_code" type="xs:string" minOccurs="0"/>
+      <xs:element name="operation_id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OrderValues">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="orderValuesDetail" type="tns:orderValuesDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetParametersResponse">
+    <xs:sequence>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+      <xs:element name="return" type="tns:getParametersResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetOrderIDResponse">
+    <xs:sequence>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+      <xs:element name="return" type="tns:getOrderIDResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getParametersDetail">
+    <xs:sequence>
+      <xs:element name="groupCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="indicator" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CheckOrderIDResponse">
+    <xs:sequence>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+      <xs:element name="return" type="tns:checkOrderIDResult" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetParameters">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="getParametersDetail" type="tns:getParametersDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOrderIDDetail">
+    <xs:sequence>
+      <xs:element name="memberID" type="xs:string" minOccurs="0"/>
+      <xs:element name="miles" type="xs:int"/>
+      <xs:element name="operationCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="successURL" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="GetOrderID">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="getOrderIDDetail" type="tns:getOrderIDDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Mrglog">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="mrglogDetail" type="tns:mrglogDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirReissueAward">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="nonAirReissueAwardDetail" type="tns:nonAirReissueAwardDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirReissueAwardDetail">
+    <xs:sequence>
+      <xs:element name="memberId" type="xs:string" minOccurs="0"/>
+      <xs:element name="awardUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:double"/>
+      <xs:element name="currency" type="xs:string" minOccurs="0"/>
+      <xs:element name="amount" type="xs:double"/>
+      <xs:element name="rate" type="xs:double"/>
+      <xs:element name="referenceNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="approvalCode" type="xs:int"/>
+      <xs:element name="nPhaseId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirReissueAwardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:nonAirReissueAwardResult" minOccurs="0"/>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirReissueAwardResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence>
+          <xs:element name="approvalCode" type="xs:int"/>
+          <xs:element name="reissuedMiles" type="xs:double"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAward">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="nonAirIssueAwardDetail" type="tns:nonAirIssueAwardDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAwardDetail">
+    <xs:sequence>
+      <xs:element name="memberId" type="xs:string" minOccurs="0"/>
+      <xs:element name="awardUnit" type="xs:string" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:double"/>
+      <xs:element name="currency" type="xs:string" minOccurs="0"/>
+      <xs:element name="amount" type="xs:double"/>
+      <xs:element name="rate" type="xs:double"/>
+      <xs:element name="activityDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="referenceNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="nPhaseId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAwardWithOrderIDDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:nonAirIssueAwardDetail">
+        <xs:sequence>
+          <xs:element name="operationCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="orderID" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAwardWithTokenDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:nonAirIssueAwardDetail">
+        <xs:sequence>
+          <xs:element name="token" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAwardResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:nonAirIssueAwardResult" minOccurs="0"/>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirIssueAwardResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence>
+          <xs:element name="approvalCode" type="xs:int"/>
+          <xs:element name="redeemedMiles" type="xs:double"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirAwardReversal">
+    <xs:sequence>
+      <xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+      <xs:element name="nonAirAwardReversalDetail" type="tns:nonAirAwardReversalDetail" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirAwardReversalDetail">
+    <xs:sequence>
+      <xs:element name="memberId" type="xs:string" minOccurs="0"/>
+      <xs:element name="referenceNumber" type="xs:string" minOccurs="0"/>
+      <xs:element name="approvalCode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirAwardReversalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:nonAirAwardReversalResult" minOccurs="0"/>
+      <xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nonAirAwardReversalResult">
+    <xs:complexContent>
+      <xs:extension base="tns:methodResult">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

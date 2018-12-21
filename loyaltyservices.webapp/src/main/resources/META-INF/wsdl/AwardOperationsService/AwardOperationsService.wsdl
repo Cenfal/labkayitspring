@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="AwardOperationsService" targetNamespace="http://redemption.ws.ms.thy.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://redemption.ws.ms.thy.com/" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.thy.com/ws/responseHeader" schemaLocation="AwardOperationsService1.xml"/>
+    </xsd:schema>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.thy.com/ws/requestHeader" schemaLocation="AwardOperationsService2.xml"/>
+    </xsd:schema>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://redemption.ws.ms.thy.com/" schemaLocation="AwardOperationsService3.xml"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="nonAirAwardReversal">
+    <WL5G3N0:part element="WL5G3N1:nonAirAwardReversal" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nonAirAwardReversalResponse">
+    <WL5G3N0:part element="WL5G3N1:nonAirAwardReversalResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nonAirReissueAward">
+    <WL5G3N0:part element="WL5G3N1:nonAirReissueAward" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nonAirReissueAwardResponse">
+    <WL5G3N0:part element="WL5G3N1:nonAirReissueAwardResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nonAirIssueAward">
+    <WL5G3N0:part element="WL5G3N1:nonAirIssueAward" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nonAirIssueAwardResponse">
+    <WL5G3N0:part element="WL5G3N1:nonAirIssueAwardResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="AwardOperationsService">
+    <WL5G3N0:operation name="nonAirAwardReversal">
+      <WL5G3N0:input message="WL5G3N1:nonAirAwardReversal"/>
+      <WL5G3N0:output message="WL5G3N1:nonAirAwardReversalResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nonAirReissueAward">
+      <WL5G3N0:input message="WL5G3N1:nonAirReissueAward"/>
+      <WL5G3N0:output message="WL5G3N1:nonAirReissueAwardResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nonAirIssueAward">
+      <WL5G3N0:input message="WL5G3N1:nonAirIssueAward"/>
+      <WL5G3N0:output message="WL5G3N1:nonAirIssueAwardResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="AwardOperationsServicePortBinding" type="WL5G3N1:AwardOperationsService">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="nonAirAwardReversal">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nonAirReissueAward">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="nonAirIssueAward">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="AwardOperationsService">
+    <WL5G3N0:port binding="WL5G3N1:AwardOperationsServicePortBinding" name="AwardOperationsServicePort">
+      <WL5G3N2:address location="AwardOperationsService.xml"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

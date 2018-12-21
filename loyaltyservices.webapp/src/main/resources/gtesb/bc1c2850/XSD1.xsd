@@ -1,0 +1,60 @@
+<!--
+File BC1C2850O.xsd, application GAR.IB.WS.KART.BC1C2850_THY_OFFER_USE
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gtesb/BC1C2850Response" elementFormDefault="qualified" targetNamespace="http://gtesb/BC1C2850Response">
+<complexType name="WsServiceResponse">
+<sequence>
+<element name="outputFieldsQ" type="tns:OutputFieldsQ"/>
+<element name="expError" type="tns:ExpError"/>
+</sequence>
+</complexType>
+<complexType name="OutputFieldsQ">
+<sequence>
+<element name="e2850ExpErrorWsQ" type="tns:E2850ExpErrorWsQ"/>
+</sequence>
+</complexType>
+<complexType name="E2850ExpErrorWsQ">
+<sequence>
+<element name="errorCodeQ">
+<simpleType>
+<restriction base="int">
+<totalDigits value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="errorTextQ">
+<simpleType>
+<restriction base="string">
+<maxLength value="100"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</complexType>
+<complexType name="ExpError">
+<sequence>
+<element name="returnCodea">
+<simpleType>
+<restriction base="int">
+<totalDigits value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="reasonCodea">
+<simpleType>
+<restriction base="int">
+<totalDigits value="5"/>
+</restriction>
+</simpleType>
+</element>
+<element name="messageTxt">
+<simpleType>
+<restriction base="string">
+<maxLength value="512"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</complexType>
+<element name="wsServiceResponse" type="tns:WsServiceResponse"/>
+</schema>

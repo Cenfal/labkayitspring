@@ -1,0 +1,76 @@
+<!--
+File BC1C2850I.xsd, application GAR.IB.WS.KART.BC1C2850_THY_OFFER_USE
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gtesb/BC1C2850Request" elementFormDefault="qualified" targetNamespace="http://gtesb/BC1C2850Request">
+<complexType name="WsServiceRequest">
+<sequence>
+<element name="hdrCompanyId">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="hdrPlatformType">
+<simpleType>
+<restriction base="string">
+<maxLength value="3"/>
+</restriction>
+</simpleType>
+</element>
+<element name="hdrUserId">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType>
+</element>
+<element name="hdrPassword">
+<simpleType>
+<restriction base="string">
+<maxLength value="8"/>
+</restriction>
+</simpleType>
+</element>
+<element name="hdrToken">
+<simpleType>
+<restriction base="string">
+<maxLength value="64"/>
+</restriction>
+</simpleType>
+</element>
+<element name="hdrDialectCd">
+<simpleType>
+<restriction base="string">
+<maxLength value="2"/>
+</restriction>
+</simpleType>
+</element>
+<element name="logDisplayYN">
+<simpleType>
+<restriction base="string">
+<maxLength value="1"/>
+</restriction>
+</simpleType>
+</element>
+<element name="inputFieldsQ" type="tns:InputFieldsQ"/>
+</sequence>
+</complexType>
+<complexType name="InputFieldsQ">
+<sequence>
+<element name="i2850ImpQ" type="tns:I2850ImpQ"/>
+</sequence>
+</complexType>
+<complexType name="I2850ImpQ">
+<sequence>
+<element name="offerKeyCodeQ">
+<simpleType>
+<restriction base="string">
+<maxLength value="13"/>
+</restriction>
+</simpleType>
+</element>
+</sequence>
+</complexType>
+<element name="wsServiceRequest" type="tns:WsServiceRequest"/>
+</schema>

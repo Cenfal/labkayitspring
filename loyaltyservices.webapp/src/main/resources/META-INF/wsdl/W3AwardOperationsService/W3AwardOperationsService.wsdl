@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="W3AwardOperationsService" targetNamespace="http://w3.redemption.ws.ms.thy.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://w3.redemption.ws.ms.thy.com/" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://w3.redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.thy.com/ws/responseHeader" schemaLocation="W3AwardOperationsService1.xml"/>
+    </xsd:schema>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://w3.redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.thy.com/ws/requestHeader" schemaLocation="W3AwardOperationsService2.xml"/>
+    </xsd:schema>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://w3.redemption.ws.ms.thy.com/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://w3.redemption.ws.ms.thy.com/" schemaLocation="W3AwardOperationsService3.xml"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="GiveEcGift">
+    <WL5G3N0:part element="WL5G3N1:GiveEcGift" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="GiveEcGiftResponse">
+    <WL5G3N0:part element="WL5G3N1:GiveEcGiftResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="EcGiftMembers">
+    <WL5G3N0:part element="WL5G3N1:EcGiftMembers" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="EcGiftMembersResponse">
+    <WL5G3N0:part element="WL5G3N1:EcGiftMembersResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="MileageDonation">
+    <WL5G3N0:part element="WL5G3N1:MileageDonation" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="MileageDonationResponse">
+    <WL5G3N0:part element="WL5G3N1:MileageDonationResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="exchangeMiles">
+    <WL5G3N0:part element="WL5G3N1:exchangeMiles" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="exchangeMilesResponse">
+    <WL5G3N0:part element="WL5G3N1:exchangeMilesResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="MileageDonationCharityList">
+    <WL5G3N0:part element="WL5G3N1:MileageDonationCharityList" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="MileageDonationCharityListResponse">
+    <WL5G3N0:part element="WL5G3N1:MileageDonationCharityListResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="AwardOperationsService">
+    <WL5G3N0:operation name="GiveEcGift">
+      <WL5G3N0:input message="WL5G3N1:GiveEcGift"/>
+      <WL5G3N0:output message="WL5G3N1:GiveEcGiftResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="EcGiftMembers">
+      <WL5G3N0:input message="WL5G3N1:EcGiftMembers"/>
+      <WL5G3N0:output message="WL5G3N1:EcGiftMembersResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="MileageDonation">
+      <WL5G3N0:input message="WL5G3N1:MileageDonation"/>
+      <WL5G3N0:output message="WL5G3N1:MileageDonationResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="exchangeMiles">
+      <WL5G3N0:input message="WL5G3N1:exchangeMiles"/>
+      <WL5G3N0:output message="WL5G3N1:exchangeMilesResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="MileageDonationCharityList">
+      <WL5G3N0:input message="WL5G3N1:MileageDonationCharityList"/>
+      <WL5G3N0:output message="WL5G3N1:MileageDonationCharityListResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="AwardOperationsServicePortBinding" type="WL5G3N1:AwardOperationsService">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="GiveEcGift">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="EcGiftMembers">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="MileageDonation">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="exchangeMiles">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="MileageDonationCharityList">
+      <WL5G3N2:operation/>
+      <WL5G3N0:input>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="W3AwardOperationsService">
+    <WL5G3N0:port binding="WL5G3N1:AwardOperationsServicePortBinding" name="AwardOperationsServicePort">
+      <WL5G3N2:address location="W3AwardOperationsService.xml"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

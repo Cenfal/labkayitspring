@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thy.ws:nphase-service:1.0-TICKETING">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/nphase-service/1.0-TICKETING/nphase-service-1.0-TICKETING.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/nphase-service/1.0-TICKETING/nphase-service-1.0-TICKETING-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/nphase-service/1.0-TICKETING/nphase-service-1.0-TICKETING-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

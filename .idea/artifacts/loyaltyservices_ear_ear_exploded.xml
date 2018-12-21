@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="loyaltyservices.ear:ear exploded">
+    <output-path>$PROJECT_DIR$/loyaltyservices.ear/target/LoyaltyServicesEAR</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="loyaltyservices.ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/loyaltyservices.ear/target/LoyaltyServicesEAR/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/loyaltyservices.ear/src/main/application" />
+      <element id="archive" name="LoyaltyServices.war">
+        <element id="artifact" artifact-name="loyaltyservices.webapp:war exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>

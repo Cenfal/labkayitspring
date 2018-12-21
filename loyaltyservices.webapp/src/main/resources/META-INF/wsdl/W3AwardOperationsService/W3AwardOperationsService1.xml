@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://www.thy.com/ws/responseHeader" xmlns:tns="http://www.thy.com/ws/responseHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element name="reason" type="xs:string" minOccurs="0"/>
+      <xs:element name="localizedDescription" type="xs:string" minOccurs="0"/>
+      <xs:element name="bundleParameters" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="bundleParametersMap" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entry" nillable="true" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="key" type="xs:string" minOccurs="0"/>
+                  <xs:element name="value" type="tns:BundleParam" minOccurs="0"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="messageType" type="tns:messageType"/>
+    <xs:attribute name="messageCode" type="xs:string"/>
+    <xs:attribute name="messageGroup" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="BundleParam">
+    <xs:sequence/>
+    <xs:attribute name="paramValue" type="xs:string"/>
+    <xs:attribute name="isTranslatable" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="ResponseHeader">
+    <xs:sequence>
+      <xs:element name="statusCode" type="tns:StatusCode" default="FAILURE" minOccurs="0"/>
+      <xs:element name="messages" type="tns:Message" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="clientTransactionId" type="xs:string" minOccurs="0"/>
+      <xs:element name="serverTransactionId" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="messageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="validation"/>
+      <xs:enumeration value="info"/>
+      <xs:enumeration value="error"/>
+      <xs:enumeration value="warning"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StatusCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SUCCESS"/>
+      <xs:enumeration value="FAILURE"/>
+      <xs:enumeration value="INITIAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thy.ws.header:wslogger:2.1.48-MSSERVICES">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/header/wslogger/2.1.48-MSSERVICES/wslogger-2.1.48-MSSERVICES.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/header/wslogger/2.1.48-MSSERVICES/wslogger-2.1.48-MSSERVICES-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/ws/header/wslogger/2.1.48-MSSERVICES/wslogger-2.1.48-MSSERVICES-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

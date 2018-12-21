@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.5. --><xs:schema xmlns:tns="http://w3.ws.ms.thy.com/" xmlns:ns2="http://www.thy.com/ws/responseHeader" xmlns:ns1="http://www.thy.com/ws/requestHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://w3.ws.ms.thy.com/">
+
+<xs:import namespace="http://www.thy.com/ws/requestHeader" schemaLocation="W3MemberDetailsService2.xml"/>
+
+<xs:import namespace="http://www.thy.com/ws/responseHeader" schemaLocation="W3MemberDetailsService1.xml"/>
+
+<xs:element name="getMemberDetails" type="tns:getMemberDetails"/>
+
+<xs:element name="getMemberDetailsResponse" type="tns:getMemberDetailsResponse"/>
+
+<xs:element name="getMultiMemberDetails" type="tns:getMultiMemberDetails"/>
+
+<xs:element name="getMultiMemberDetailsResponse" type="tns:getMultiMemberDetailsResponse"/>
+
+<xs:element name="isServiceUp" type="tns:isServiceUp"/>
+
+<xs:element name="isServiceUpResponse" type="tns:isServiceUpResponse"/>
+
+<xs:complexType name="isServiceUp">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isServiceUpResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMultiMemberDetails">
+<xs:sequence>
+<xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+<xs:element name="getMultiMemberDetailsDetail" type="tns:getMultiMemberDetailsDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMultiMemberDetailsDetail">
+<xs:sequence>
+<xs:element name="multiMemberDetailList" type="tns:getMemberDetailsDetail" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMemberDetailsDetail">
+<xs:sequence>
+<xs:element name="birthDate" type="xs:string" minOccurs="0"/>
+<xs:element name="companyPassword" type="xs:string" minOccurs="0"/>
+<xs:element name="ffid" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="pinNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="surname" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMultiMemberDetailsResponse">
+<xs:sequence>
+<xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+<xs:element name="return" type="tns:getMultiMemberDetailsResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMultiMemberDetailsResult">
+<xs:complexContent>
+<xs:extension base="tns:methodResult">
+<xs:sequence>
+<xs:element name="multiMemberDetail" type="tns:getMultiMemberDetailsResultRecord" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="methodResult">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getMultiMemberDetailsResultRecord">
+<xs:complexContent>
+<xs:extension base="tns:getMemberDetailsResult">
+<xs:sequence>
+<xs:element name="flyerId" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="getMemberDetailsResult">
+<xs:complexContent>
+<xs:extension base="tns:methodResult">
+<xs:sequence>
+<xs:element name="memberDataKVPair" type="tns:msKeyValuePairW3" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="msKeyValuePairW3">
+<xs:sequence>
+<xs:element name="format" type="xs:string" minOccurs="0"/>
+<xs:element name="key" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMemberDetails">
+<xs:sequence>
+<xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+<xs:element name="getMemberDetailsDetail" type="tns:getMemberDetailsDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getMemberDetailsResponse">
+<xs:sequence>
+<xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+<xs:element name="return" type="tns:getMemberDetailsResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

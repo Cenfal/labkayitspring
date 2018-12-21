@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thy:emd-operation-services:2.5-TKMILES">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/emd-operation-services/2.5-TKMILES/emd-operation-services-2.5-TKMILES.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/emd-operation-services/2.5-TKMILES/emd-operation-services-2.5-TKMILES-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/emd-operation-services/2.5-TKMILES/emd-operation-services-2.5-TKMILES-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

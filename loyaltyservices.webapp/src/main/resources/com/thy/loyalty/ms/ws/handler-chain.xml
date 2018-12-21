@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:MemberDetailsWebService</service-name-pattern>
+		<handler>
+			<handler-name>MemberDetailsMessageHandler</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:MemberNonAirAccrualWebService</service-name-pattern>
+		<handler>
+			<handler-name>MemberNonAirAccrualWebService</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:CommonWebService</service-name-pattern>
+		<handler>
+			<handler-name>HeaderLogHandler</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:MemberCredentialService</service-name-pattern>
+		<handler>
+			<handler-name>BaseMessageHandler</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:IdentityNumberDetailsWebService</service-name-pattern>
+		<handler>
+			<handler-name>MemberNonAirAccrualWebService</handler-name>
+			<handler-class>com.thy.loyalty.ms.accrual.service.handler.MemberNonAirAccrualMessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:RetroClaimService</service-name-pattern>
+		<handler>
+			<handler-name>MessageHandler</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://ws.ms.thy.com/">ns1:ListMemberDetailsWebService</service-name-pattern>
+		<handler>
+			<handler-name>MessageHandler</handler-name>
+			<handler-class>com.thy.loyalty.ms.common.service.handler.MessageHandler</handler-class>
+		</handler>
+	</handler-chain>
+
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://membership.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://accrual.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://common.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://redemption.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://mile.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://www.thy.com/ws/nphase">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://utility.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://w3.heroes.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://youandfriend.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://membercard.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://lookups.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://newmember.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	
+	<handler-chain>
+		<service-name-pattern xmlns:ns1="http://feedback.ws.ms.thy.com/">ns1:*</service-name-pattern>
+		<handler>
+			<handler-name>LoggingHandler</handler-name>
+			<handler-class>com.thy.ws.header.handler.LogHandler</handler-class>
+		</handler>
+	</handler-chain>
+	
+</handler-chains>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: tr.gov.nvi:mernis-client:1.0-MSSERVICES">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/tr/gov/nvi/mernis-client/1.0-MSSERVICES/mernis-client-1.0-MSSERVICES.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/tr/gov/nvi/mernis-client/1.0-MSSERVICES/mernis-client-1.0-MSSERVICES-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/tr/gov/nvi/mernis-client/1.0-MSSERVICES/mernis-client-1.0-MSSERVICES-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/loyaltyservices.iml" filepath="$PROJECT_DIR$/loyaltyservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loyaltyservices.ear/loyaltyservices.ear.iml" filepath="$PROJECT_DIR$/loyaltyservices.ear/loyaltyservices.ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loyaltyservices.webapp/loyaltyservices.webapp.iml" filepath="$PROJECT_DIR$/loyaltyservices.webapp/loyaltyservices.webapp.iml" />
+    </modules>
+  </component>
+</project>

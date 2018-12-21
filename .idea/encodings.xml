@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="ISO-8859-9" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.ear" charset="ISO-8859-9" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp" charset="ISO-8859-9" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/controller/entrychannel/EntryChannelBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/base/GenericDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/base/GenericDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/base/impl/GenericDAOImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/base/impl/GenericDAOImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/entrychannel/EntryChannelDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/dao/entrychannel/impl/EntryChannelDAOImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/model/base/BaseEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/model/base/BaseEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/model/base/Entity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/model/base/Entity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/service/base/BaseService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/service/base/impl/BaseServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/service/loyalty/entrychannel/EntryChannelService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/java/com/thy/loyalty/service/loyalty/entrychannel/impl/EntryChannelServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/webapp/style" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/loyaltyservices.webapp/src/main/webapp/template" charset="UTF-8" />
+  </component>
+</project>

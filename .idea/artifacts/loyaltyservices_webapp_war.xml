@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="loyaltyservices.webapp:war">
+    <output-path>$PROJECT_DIR$/loyaltyservices.webapp/target</output-path>
+    <root id="archive" name="loyaltyservices.webapp-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="loyaltyservices.webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

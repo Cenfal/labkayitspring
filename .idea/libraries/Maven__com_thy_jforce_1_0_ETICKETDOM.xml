@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thy:jforce:1.0-ETICKETDOM">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/jforce/1.0-ETICKETDOM/jforce-1.0-ETICKETDOM.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/jforce/1.0-ETICKETDOM/jforce-1.0-ETICKETDOM-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/jforce/1.0-ETICKETDOM/jforce-1.0-ETICKETDOM-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

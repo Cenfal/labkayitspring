@@ -1,0 +1,19 @@
+<!--
+File BC1C2850_InlineSchema1.xsd, application GAR.IB.WS.KART.BC1C2850_THY_OFFER_USE
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://gtesb/BC1C2850/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd1="http://gtesb/BC1C2850Request" xmlns:xsd2="http://gtesb/BC1C2850Response" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://gtesb/BC1C2850/">
+<xsd:element name="BC1C2850Operation">
+<xsd:complexType>
+<xsd:sequence maxOccurs="1" minOccurs="1">
+<xsd:element name="in" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="BC1C2850OperationResponse">
+<xsd:complexType>
+<xsd:sequence maxOccurs="1" minOccurs="1">
+<xsd:element name="out" type="xsd:string"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>

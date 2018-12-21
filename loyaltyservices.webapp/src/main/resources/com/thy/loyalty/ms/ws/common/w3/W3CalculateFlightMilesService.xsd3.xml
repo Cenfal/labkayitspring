@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.5. --><xs:schema xmlns:tns="http://w3.common.ws.ms.thy.com/" xmlns:ns2="http://www.thy.com/ws/responseHeader" xmlns:ns1="http://www.thy.com/ws/requestHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://w3.common.ws.ms.thy.com/">
+
+<xs:import namespace="http://www.thy.com/ws/requestHeader" schemaLocation="W3CalculateFlightMilesService.xsd2.xml"/>
+
+<xs:import namespace="http://www.thy.com/ws/responseHeader" schemaLocation="W3CalculateFlightMilesService.xsd1.xml"/>
+
+<xs:element name="calculateFlightMiles" type="tns:calculateFlightMiles"/>
+
+<xs:element name="calculateFlightMilesResponse" type="tns:calculateFlightMilesResponse"/>
+
+<xs:complexType name="calculateFlightMiles">
+<xs:sequence>
+<xs:element name="requestHeader" type="ns1:RequestHeader" minOccurs="0"/>
+<xs:element name="calculateFlightMilesDetail" type="tns:calculateFlightMilesDetail" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateFlightMilesDetail">
+<xs:sequence>
+<xs:element name="cabin_code" type="xs:string" minOccurs="0"/>
+<xs:element name="card_type" type="xs:string" minOccurs="0"/>
+<xs:element name="class_code" type="xs:string" minOccurs="0"/>
+<xs:element name="destination" type="xs:string" minOccurs="0"/>
+<xs:element name="flightDate" type="xs:string" minOccurs="0"/>
+<xs:element name="marketingClassCode" type="xs:string" minOccurs="0"/>
+<xs:element name="marketingFlightNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="operatingFlightNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="origin" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateFlightMilesResponse">
+<xs:sequence>
+<xs:element name="responseHeader" type="ns2:ResponseHeader" minOccurs="0"/>
+<xs:element name="return" type="tns:calculateFlightMilesResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateFlightMilesResult">
+<xs:complexContent>
+<xs:extension base="tns:serviceResult">
+<xs:sequence>
+<xs:element name="milesResponseDetail" type="tns:calculateFlightMilesResponseDetails" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="serviceResult">
+<xs:sequence>
+<xs:element name="resultCode" type="xs:string" minOccurs="0"/>
+<xs:element name="resultDescription" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateFlightMilesResponseDetails">
+<xs:sequence>
+<xs:element name="baseMiles" type="xs:string" minOccurs="0"/>
+<xs:element name="basePoint" type="xs:string" minOccurs="0"/>
+<xs:element name="cabinType" type="xs:string" minOccurs="0"/>
+<xs:element name="classCodes" type="xs:string" minOccurs="0"/>
+<xs:element name="definition" type="xs:string" minOccurs="0"/>
+<xs:element name="flightCount" type="xs:string" minOccurs="0"/>
+<xs:element name="promoMiles" type="xs:string" minOccurs="0"/>
+<xs:element name="promoPoints" type="xs:string" minOccurs="0"/>
+<xs:element name="totalMiles" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.thy:nphase-service:1.0-TKMILES">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/nphase-service/1.0-TKMILES/nphase-service-1.0-TKMILES.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/nphase-service/1.0-TKMILES/nphase-service-1.0-TKMILES-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/thy/nphase-service/1.0-TKMILES/nphase-service-1.0-TKMILES-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

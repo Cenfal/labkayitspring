@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Oracle JAX-WS 2.1.5. --><xs:schema xmlns:tns="http://www.thy.com/ws/requestHeader" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://www.thy.com/ws/requestHeader">
+
+<xs:complexType name="RequestHeader">
+<xs:sequence>
+<xs:element name="clientCode" type="xs:string" minOccurs="0"/>
+<xs:element name="clientUsername" type="xs:string" minOccurs="0"/>
+<xs:element name="channel" type="tns:ChannelType" minOccurs="0"/>
+<xs:element name="airlineCode" type="xs:string" minOccurs="0"/>
+<xs:element name="application" type="xs:string" minOccurs="0"/>
+<xs:element name="agent" type="xs:string" minOccurs="0"/>
+<xs:element name="clientTransactionId" type="xs:string" minOccurs="0"/>
+<xs:element name="languageCode" type="tns:LanguageCodeType" minOccurs="0"/>
+<xs:element name="agencyOfficeCode" type="xs:string" minOccurs="0"/>
+<xs:element name="ton" type="xs:string" minOccurs="0"/>
+<xs:element name="userAgencyCode" type="xs:string" minOccurs="0"/>
+<xs:element name="agencyCode" type="xs:string" minOccurs="0"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+<xs:element name="agencySubCode" type="xs:string" minOccurs="0"/>
+<xs:element name="dutyCode" type="xs:string" minOccurs="0"/>
+<xs:element name="extraParameters" type="tns:ParamType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ParamType">
+<xs:sequence/>
+<xs:attribute name="key" type="xs:string"/>
+<xs:attribute name="value" type="xs:string"/>
+</xs:complexType>
+
+<xs:simpleType name="ChannelType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="MOBILE"/>
+<xs:enumeration value="WEB"/>
+<xs:enumeration value="KIOSK"/>
+<xs:enumeration value="STAND_ALONE"/>
+<xs:enumeration value="TKAPP"/>
+<xs:enumeration value="CONVENTION"/>
+<xs:enumeration value="QRES"/>
+<xs:enumeration value="BATCH"/>
+<xs:enumeration value="IBE"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LanguageCodeType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="EN"/>
+<xs:enumeration value="DE"/>
+<xs:enumeration value="TR"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
